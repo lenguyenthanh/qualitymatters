@@ -5,7 +5,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.NonNull;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.artemzin.qualitymatters.api.entities.Item;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
@@ -34,8 +36,10 @@ public class ApplicationModule {
     }
 
     @Provides @NonNull @Singleton
-    public ObjectMapper provideObjectMapper() {
-        return new ObjectMapper();
+    public Gson provideGson() {
+        return new GsonBuilder()
+                .registerTypeAdapterFactory(Item.typeAdapterFactory())
+                .create();
     }
 
     @Provides @NonNull @Named(MAIN_THREAD_HANDLER) @Singleton
