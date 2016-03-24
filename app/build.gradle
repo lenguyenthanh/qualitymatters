@@ -125,6 +125,8 @@ dependencies {
     apt libraries.autoValue
     // Make AutoValue annotation visible to the compiler.
     provided libraries.autoValue
+    apt libraries.autoGson
+    apt libraries.gson
 
     compile libraries.supportAnnotations
     compile libraries.supportAppCompat

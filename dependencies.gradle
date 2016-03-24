@@ -24,6 +24,8 @@ ext.versions = [
         retrofit                     : '2.0.0-beta4',
         jackson                      : '2.6.3',
         autoValue                    : '1.2-rc1',
+        autoGson                     : '0.2.1',
+        gson                         : '2.6.2',
         butterKnife                  : '7.0.1',
         picasso                      : '2.5.2',
         picassoOkHttpDownloader      : '1.0.2',
@@ -69,6 +71,8 @@ ext.libraries = [
         jacksonDataBind         : "com.fasterxml.jackson.core:jackson-databind:$versions.jackson",
 
         autoValue               : "com.google.auto.value:auto-value:$versions.autoValue",
+        autoGson                : "com.ryanharter.auto.value:auto-value-gson:$versions.autoGson",
+        gson                    : "com.google.code.gson:gson:$versions.gson",
 
         supportAnnotations      : "com.android.support:support-annotations:$versions.supportLibs",
         supportAppCompat        : "com.android.support:appcompat-v7:$versions.supportLibs",
