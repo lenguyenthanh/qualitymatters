@@ -117,9 +117,8 @@ dependencies {
 
     compile libraries.okHttp
     compile libraries.retrofit
-    compile libraries.retrofitJacksonConverter
+    compile libraries.retrofitGsonConverter
     compile libraries.retrofitRxJavaAdapter
-    compile libraries.jacksonDataBind
 
     // Do not compile AutoValue dependencies to the app.
     apt libraries.autoValue
