@@ -3,12 +3,13 @@ package com.artemzin.qualitymatters.api.entities;
 import android.support.annotation.NonNull;
 
 import com.google.auto.value.AutoValue;
-import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 
 // This class is immutable, it has correctly implemented hashCode and equals.
 // Thanks to AutoValue https://github.com/google/auto/tree/master/value.
 @AutoValue
+@JsonAdapter(AutoValue_Item.ItemTypeAdapterFactory.class)
 public abstract class Item {
 
     private static final String JSON_PROPERTY_ID = "id";
@@ -19,11 +20,6 @@ public abstract class Item {
     @NonNull
     public static Builder builder() {
         return new AutoValue_Item.Builder();
-    }
-
-    @NonNull
-    public static TypeAdapterFactory typeAdapterFactory() {
-        return AutoValue_Item.typeAdapterFactory();
     }
 
     @NonNull

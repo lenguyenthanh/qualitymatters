@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.NonNull;
 
-import com.artemzin.qualitymatters.api.entities.Item;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jakewharton.picasso.OkHttp3Downloader;
@@ -38,7 +37,6 @@ public class ApplicationModule {
     @Provides @NonNull @Singleton
     public Gson provideGson() {
         return new GsonBuilder()
-                .registerTypeAdapterFactory(Item.typeAdapterFactory())
                 .create();
     }
 
